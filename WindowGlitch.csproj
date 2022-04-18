@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RuntimeIdentifiers>win-x86;win-x64;linux-x64;osx-x64</RuntimeIdentifiers>
+    <Nullable>enable</Nullable>
+    <RootNamespace>WindowGlitch</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <CFBundleName>WindowGlitch</CFBundleName>
+    <CFBundleDisplayName>WindowGlitch</CFBundleDisplayName>
+    <CFBundleIdentifier>com.example</CFBundleIdentifier>
+    <CFBundleVersion>1.0.0</CFBundleVersion>
+    <CFBundlePackageType>APPL</CFBundlePackageType>
+    <CFBundleExecutable>WindowGlitch</CFBundleExecutable>
+    <CFBundleSignature>com.codice.windowglitch</CFBundleSignature>
+    <CFBundleShortVersionString>1.0</CFBundleShortVersionString>
+    <NSPrincipalClass>NSApplication</NSPrincipalClass>
+    <NSHighResolutionCapable>true</NSHighResolutionCapable>
+</PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="0.10.13" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.13" />
+    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.13" />
+    <PackageReference Include="Dotnet.Bundle" Version="*" />
+   </ItemGroup>
+</Project>
