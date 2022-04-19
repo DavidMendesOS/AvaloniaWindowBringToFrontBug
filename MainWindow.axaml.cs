@@ -8,11 +8,13 @@ namespace WindowGlitch
 {
     public class MainWindow : Window
     {
+        private StackPanel panel = null;
+        
         public MainWindow()
         {
             InitializeComponent();
 
-            var panel = new StackPanel
+            panel = new StackPanel
             {
                 Orientation = Avalonia.Layout.Orientation.Horizontal,
                 HorizontalAlignment = Avalonia.Layout.HorizontalAlignment.Center,
@@ -48,9 +50,15 @@ namespace WindowGlitch
                 Position = new PixelPoint(0,0),
                 SystemDecorations = SystemDecorations.Full
             };
-            
+
             newWindow.Show(this);
+
+            var activateWindow = new Button();
+            activateWindow.Click += (x, y) => newWindow.Activate();
+            activateWindow.Content = "Activate Window";
             
+            panel.Children.Add(activateWindow);
+
         }
 
         private void InitializeComponent()
